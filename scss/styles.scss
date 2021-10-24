@@ -1,0 +1,220 @@
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan1: hsl(186, 14%, 43%);
+$dark-grayish-cyan2: hsl(184, 14%, 56%);
+$light-grayish-cyan1: hsl(185, 41%, 84%);
+$light-grayish-cyan2: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: $light-grayish-cyan1;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    .logo {
+        margin: 50px 0;
+    }
+}
+
+.wrapper {
+    width: 50%;
+    display: flex;
+    background-color: $white;
+    padding: 3rem;
+    border-radius: 2rem;
+    gap: 3rem;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 0 1rem;
+    gap: 3rem;
+
+    .label-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+
+        .error-msg {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: rgb(240, 163, 22);
+            opacity: 0;
+        }
+
+        .show {
+            transition: opacity 1s ease;
+            opacity: 1;
+        }
+    }
+
+    label {
+        color: $dark-grayish-cyan1;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .input-wrapper {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 1.4rem;
+            left: 2.5rem;
+        }
+    }
+
+    .input-text {
+        color: $very-dark-cyan;
+        font-size: 2.4rem;
+        font-weight: 700;
+        background-color: $light-grayish-cyan2;
+        border: none;
+        text-align: right;
+        border-radius: .5rem;
+        padding: .5rem 2.5rem;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $strong-cyan;
+        }
+
+        &.error {
+            border: 2px solid rgb(240, 163, 22);
+        }
+    }
+
+    .btn-wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: .7rem;
+
+        .btn {
+            font-size: 2.4rem;
+            background-color: $very-dark-cyan;
+            color: $white;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 0;
+            border-radius: .5rem;
+            width: 32%;
+            transition: .5s ease;
+
+            &:hover {
+                background-color: #9fe8df;
+                color: $very-dark-cyan;
+            }
+        }
+
+        .active {
+            background-color: $strong-cyan;
+            color: $very-dark-cyan;
+        }
+
+        .input-text {
+            color: $very-dark-cyan;
+            background-color: $light-grayish-cyan2;
+            font-size: 1.9rem;
+
+            &:focus {
+                background-color: $light-grayish-cyan2;
+                transition: unset;
+            }
+        }
+    }
+}
+
+.output {
+    display: flex;
+    flex-flow: column;
+    background-color: $very-dark-cyan;
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 3rem;
+
+    .line-output {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-wrapper {
+            p {
+                color: $white;
+                font-weight: 700;
+                font-size: 1.4rem;
+            }
+
+            .desc {
+                color: $dark-grayish-cyan2;
+                font-size: 1.2rem;
+            }
+        }
+
+        .value {
+            color: $strong-cyan;
+            font-weight: 700;
+            font-size: 4.2rem;
+        }
+    }
+
+    .reset {
+        margin-top: auto;
+        color: $very-dark-cyan;
+        background-color: $strong-cyan;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: .7rem 0;
+        transition: .5s ease;
+
+        &:hover {
+            background-color: #9fe8df;
+        }
+    }
+}
+
+.attribution {
+    display: none;
+    margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+    .container .logo {
+        margin: 25px 0;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        padding: 2rem;
+    }
+
+    .input .btn-wrapper .btn {
+        width: 48%;
+    }
+
+    .output {
+        padding: 2rem;
+
+        .line-wrapper {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

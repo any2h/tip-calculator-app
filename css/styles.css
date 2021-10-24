@@ -1,0 +1,242 @@
+/* line 9, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+/* line 14, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+}
+
+/* line 19, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* line 24, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.container .logo {
+  margin: 50px 0;
+}
+
+/* line 29, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.wrapper {
+  width: 50%;
+  display: flex;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 2rem;
+  gap: 3rem;
+}
+
+/* line 38, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding: 0 1rem;
+  gap: 3rem;
+}
+
+/* line 45, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* line 50, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .label-wrapper .error-msg {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f0a316;
+  opacity: 0;
+}
+
+/* line 57, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .label-wrapper .show {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+/* line 63, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input label {
+  color: #5e7a7d;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* line 69, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .input-wrapper {
+  position: relative;
+}
+
+/* line 72, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .input-wrapper img {
+  position: absolute;
+  top: 1.4rem;
+  left: 2.5rem;
+}
+
+/* line 79, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .input-text {
+  color: #00494d;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background-color: #f4fafa;
+  border: none;
+  text-align: right;
+  border-radius: .5rem;
+  padding: .5rem 2.5rem;
+  width: 100%;
+}
+
+/* line 90, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .input-text:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+
+/* line 95, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .input-text.error {
+  border: 2px solid #f0a316;
+}
+
+/* line 100, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: .7rem;
+}
+
+/* line 106, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper .btn {
+  font-size: 2.4rem;
+  background-color: #00494d;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: .5rem;
+  width: 32%;
+  transition: .5s ease;
+}
+
+/* line 117, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper .btn:hover {
+  background-color: #9fe8df;
+  color: #00494d;
+}
+
+/* line 123, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper .active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+/* line 128, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper .input-text {
+  color: #00494d;
+  background-color: #f4fafa;
+  font-size: 1.9rem;
+}
+
+/* line 133, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.input .btn-wrapper .input-text:focus {
+  background-color: #f4fafa;
+  transition: unset;
+}
+
+/* line 141, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output {
+  display: flex;
+  flex-flow: column;
+  background-color: #00494d;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+/* line 149, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .line-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 155, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .line-output .title-wrapper p {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* line 161, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .line-output .title-wrapper .desc {
+  color: #7f9c9f;
+  font-size: 1.2rem;
+}
+
+/* line 167, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .line-output .value {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 4.2rem;
+}
+
+/* line 174, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .reset {
+  margin-top: auto;
+  color: #00494d;
+  background-color: #26c0ab;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: .7rem 0;
+  transition: .5s ease;
+}
+
+/* line 186, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.output .reset:hover {
+  background-color: #9fe8df;
+}
+
+/* line 192, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+.attribution {
+  display: none;
+  margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+  /* line 198, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+  .container .logo {
+    margin: 25px 0;
+  }
+  /* line 202, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+  }
+  /* line 209, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+  .input .btn-wrapper .btn {
+    width: 48%;
+  }
+  /* line 213, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+  .output {
+    padding: 2rem;
+  }
+  /* line 216, ../PP/frontendmentor.io/Tip Calculator App/tip-calculator-app/tip-calculator-app-main/scss/styles.scss */
+  .output .line-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

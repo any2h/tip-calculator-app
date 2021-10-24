@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/logo.svg" alt="splitter logo">
+    </div>
+
+    <div class="wrapper">
+      <div class="input">
+        <div class="line-input">
+          <div class="label-wrapper">
+            <label for="input-bill">Bill</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" class="input-text" id="input-bill" placeholder="0.0">
+            <img src="images/icon-dollar.svg" alt="dollar sign">
+          </div>
+        </div>
+
+        <div class="line-input">
+          <div class="label-wrapper">
+            <label for="input-custom">Select Tip %</label>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn">5%</div>
+            <div class="btn active">10%</div>
+            <div class="btn">15%</div>
+            <div class="btn">25%</div>
+            <div class="btn">50%</div>
+            <input type="text" class="input-text btn" id="input-custom" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="line-input">
+          <div class="label-wrapper">
+            <label for="input-people">Number of People</label>
+            <span class="error-msg">Can't be zero</span>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="input-people" class="input-text" placeholder="1">
+            <img src="images/icon-person.svg" alt="person icon">
+          </div>
+        </div>
+      </div>
+  
+      <div class="output">
+        <div class="line-wrapper">
+          <div class="line-output">
+            <div class="title-wrapper">
+              <p class="title">Tip Amount</p>
+              <p class="desc">/ person</p>
+            </div>
+            <div class="value">$0.00</div>
+          </div>
+
+          <div class="line-output">
+            <div class="title-wrapper">
+              <p class="title">Total</p>
+              <p class="desc">/ person</p>
+            </div>
+            <div class="value">$0.00</div>
+          </div>
+        </div>
+
+        <div class="reset">Reset</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://t.me/any2h">any2h</a>.
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
